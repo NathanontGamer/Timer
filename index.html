@@ -10,18 +10,19 @@
     <div id="week" class="week"></div>
 
     <script>
-		function updateWeek() {
-		  const weekElement = document.getElementById('week');
-		  const currentDate = new Date();
-		  const dayOfWeek = currentDate.getDay();
-		  const dateOfMonth = currentDate.getDate();
-		  const weekNumber = Math.ceil((dateOfMonth - dayOfWeek) / 7);
-		  if (weekNumber % 2 === 0) {
-			weekElement.innerHTML = 'Nick';
-		  } else {
-			weekElement.innerHTML = 'Nont';
-		  }
-		}
+      function updateWeek() {
+        const weekElement = document.getElementById('week');
+        const currentDate = new Date();
+        const dayOfWeek = currentDate.getDay();
+        const dateOfMonth = currentDate.getDate();
+        const weekNumber = Math.ceil((dateOfMonth - dayOfWeek) / 7);
+        if (weekNumber % 2 === 0) {
+          weekElement.innerHTML = 'Nick';
+        } else {
+          weekElement.innerHTML = 'Nont';
+        }
+      }
+      setInterval(updateWeek, 1000);
     </script>
   </body>
 </html>
